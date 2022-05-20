@@ -1,0 +1,35 @@
+What is the difference between the static and the non-static variables of a class explain it with an example?
+
+==> Static:- A block of code would be loaded into RAM before it is executed;
+ Example:
+ package com.masai;
+static public class Song{
+static String artist="Lata";
+static String title="wande matram"
+
+ static void play(){
+System.out.println(artist+" is singing "+title);
+}
+public static void main(String[] args){
+
+play();
+}
+}
+
+Non-static:- A block of code would be loaded into RAM ,only when it is required to execute;
+example--
+package com.masai;
+public class Song{
+String artist;
+String title;
+void play(){
+System.out.println(artist+" is singing "+title);
+}
+public static void main(String[] args){
+Song track1=new Song();
+track1.artist="Lata";
+track1.title="wande matram";
+track1.play();
+
+}
+}
